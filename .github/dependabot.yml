@@ -6,11 +6,15 @@ updates:
       interval: 'cron'
       cronjob: '0 0 1 */3 *'
     groups:
-      monthly-updates:
+      regular-updates:
         patterns:
           - '*'
         update-types:
           - minor
           - patch
+    ignore:
+      - dependency-name: '*'
+        update-types:
+          - 'version-update:semver-major'
     assignees:
       - 'oneminch'
