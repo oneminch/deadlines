@@ -3,5 +3,9 @@ allowBuilds:
   '@tailwindcss/oxide': true
   esbuild: true
   vue-demi: true
+
 minimumReleaseAgeExclude:
   - '@iconify-json/simple-icons@1.2.83'
+
+shamefullyHoist: true
+strictPeerDependencies: false
