@@ -6,6 +6,3 @@ allowBuilds:
 
 minimumReleaseAgeExclude:
   - '@iconify-json/simple-icons@1.2.83'
-
-shamefullyHoist: true
-strictPeerDependencies: false
