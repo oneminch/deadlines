@@ -6,3 +6,7 @@ allowBuilds:
 
 minimumReleaseAgeExclude:
   - '@iconify-json/simple-icons@1.2.83'
+  - brace-expansion@5.0.8
+
+overrides:
+  brace-expansion@<=5.0.7: ^5.0.8
