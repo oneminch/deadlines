@@ -51,8 +51,8 @@ importers:
         specifier: ^2.10.1
         version: 2.10.1(vue@3.5.40(typescript@6.0.3))
       shadcn-nuxt:
-        specifier: 2.6.2
-        version: 2.6.2(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(magicast@0.5.3)
+        specifier: 2.8.0
+        version: 2.8.0(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(magicast@0.5.3)
       tailwind-merge:
         specifier: ^3.6.0
         version: 3.6.0
@@ -3290,8 +3290,8 @@ packages:
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  shadcn-nuxt@2.6.2:
-    resolution: {integrity: sha512-iqahlK3MiT9mCMpI4nu+9oBmoLSob/Mxod6D+Dq6r9ntXrL2wuIhxjOv8ifaOsd5knYSVBxpl9cxCQ/2Rvww0A==}
+  shadcn-nuxt@2.8.0:
+    resolution: {integrity: sha512-0HKTjq8FeEbAKGGc6a7pd72kSLNiAhCK9JgjYlZ5mJ8DPlRNQ1LV8aarfP+BKLX6IYLevUvtZiCGS5TaPS7WLQ==}
 
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -7471,7 +7471,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shadcn-nuxt@2.6.2(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(magicast@0.5.3):
+  shadcn-nuxt@2.8.0(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(magicast@0.5.3):
     dependencies:
       '@nuxt/kit': 3.21.9(magicast@0.5.3)
       oxc-parser: 0.102.0(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)
