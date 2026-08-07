@@ -22,7 +22,7 @@
     "date-fns": "^4.4.0",
     "joi": "^18.2.3",
     "localforage": "^1.10.0",
-    "nuxt": "^4.5.0",
+    "nuxt": "^4.5.1",
     "reka-ui": "^2.10.1",
     "shadcn-nuxt": "2.8.0",
     "tailwind-merge": "^3.6.0",
