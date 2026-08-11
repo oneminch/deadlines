@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: 'Geist', sans-serif;
+  --color-brand: var(--color-violet-500);
+  --color-brand-light: var(--color-violet-50);
+}
+
+@utility global-focus {
+  @apply outline-hidden ring-2 ring-brand/75 ring-offset-2 ring-offset-white dark:ring-offset-mist-800;
+}
+
+@utility icon-link {
+  @apply w-6 h-6 flex items-center justify-center;
+}
+
+@utility icon-button {
+  @apply w-10 h-10 flex items-center justify-center *:shrink-0 rounded-sm p-1 text-mist-900 dark:text-mist-50 bg-white dark:bg-mist-800 hover:bg-mist-200 dark:hover:bg-mist-700 border border-mist-200 dark:border-mist-700 focus-visible:global-focus  has-[>svg]:p-1 has-[>svg]:*:size-5;
+}
+
+@utility action-item {
+  @apply h-8 flex items-center justify-center *:shrink-0 gap-x-2 rounded-sm py-1 px-3 text-mist-900 dark:text-mist-50 bg-mist-100 dark:bg-mist-700 hover:bg-mist-200 dark:hover:bg-mist-600 border border-mist-300 dark:border-mist-600 focus-visible:global-focus;
+}
+
+@utility update-highlight {
+  @apply content-[''] absolute inset-0 -z-20 -mx-4 rounded-lg bg-amber-500/25;
+}
+
+* {
+  @apply font-sans box-border transition-all duration-200;
+}
+
+body {
+  @apply font-mono min-w-80 text-mist-900 dark:text-mist-50 bg-mist-50 dark:bg-mist-900;
+}
+
+#app {
+  @apply antialiased text-center max-w-5xl min-w-80 w-full my-0 mx-auto flex flex-col justify-center gap-y-4 px-4 sm:px-8 lg:px-4 pb-16;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  --font-sans: 'Geist', sans-serif;
+  --font-heading: var(--font-sans);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.148 0.004 228.8);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.148 0.004 228.8);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.148 0.004 228.8);
+  --primary: oklch(0.218 0.008 223.9);
+  --primary-foreground: oklch(0.987 0.002 197.1);
+  --secondary: oklch(0.963 0.002 197.1);
+  --secondary-foreground: oklch(0.218 0.008 223.9);
+  --muted: oklch(0.963 0.002 197.1);
+  --muted-foreground: oklch(0.56 0.021 213.5);
+  --accent: oklch(0.963 0.002 197.1);
+  --accent-foreground: oklch(0.218 0.008 223.9);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.925 0.005 214.3);
+  --input: oklch(0.925 0.005 214.3);
+  --ring: oklch(0.723 0.014 214.4);
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: oklch(0.148 0.004 228.8);
+  --foreground: oklch(0.987 0.002 197.1);
+  --card: oklch(0.218 0.008 223.9);
+  --card-foreground: oklch(0.987 0.002 197.1);
+  --popover: oklch(0.218 0.008 223.9);
+  --popover-foreground: oklch(0.987 0.002 197.1);
+  --primary: oklch(0.925 0.005 214.3);
+  --primary-foreground: oklch(0.218 0.008 223.9);
+  --secondary: oklch(0.275 0.011 216.9);
+  --secondary-foreground: oklch(0.987 0.002 197.1);
+  --muted: oklch(0.275 0.011 216.9);
+  --muted-foreground: oklch(0.723 0.014 214.4);
+  --accent: oklch(0.275 0.011 216.9);
+  --accent-foreground: oklch(0.987 0.002 197.1);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.56 0.021 213.5);
+}

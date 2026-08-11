@@ -1,12 +1,21 @@
 allowBuilds:
-  '@parcel/watcher': true
-  '@tailwindcss/oxide': true
-  esbuild: true
   vue-demi: true
 
-minimumReleaseAgeExclude:
-  - '@iconify-json/simple-icons@1.2.83'
-  - brace-expansion@5.0.8
-
 overrides:
-  brace-expansion@<=5.0.7: ^5.0.8
+  'vue': 'rc'
+  '@vue/compiler-core': 'rc'
+  '@vue/compiler-dom': 'rc'
+  '@vue/compiler-sfc': 'rc'
+  '@vue/compiler-ssr': 'rc'
+  '@vue/compiler-vapor': 'rc'
+  '@vue/reactivity': 'rc'
+  '@vue/runtime-core': 'rc'
+  '@vue/runtime-dom': 'rc'
+  '@vue/runtime-vapor': 'rc'
+  '@vue/server-renderer': 'rc'
+  '@vue/shared': 'rc'
+  '@vue/compat': 'rc'
+
+peerDependencyRules:
+  allowAny:
+    - 'vue'
