@@ -19,11 +19,14 @@ const today = DateUtils.formatDate(new Date())
       </h2>
     </hgroup>
 
-    <div class="hidden sm:flex items-center gap-x-2">
+    <nav class="hidden sm:flex items-center gap-x-2">
       <app-input-modal />
       <app-about-modal />
-      <app-theme-toggle />
       <app-options-modal />
-    </div>
+
+      <Separator orientation="vertical" class="w-[1.5px]! h-6! mx-0.5" />
+
+      <app-theme-toggle />
+    </nav>
   </header>
 </template>

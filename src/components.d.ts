@@ -64,7 +64,12 @@ declare module 'vue' {
     PopoverAnchor: typeof import('./components/ui/popover/PopoverAnchor.vue')['default']
     PopoverContent: typeof import('./components/ui/popover/PopoverContent.vue')['default']
     PopoverTrigger: typeof import('./components/ui/popover/PopoverTrigger.vue')['default']
+    Separator: typeof import('./components/ui/separator/Separator.vue')['default']
     Sonner: typeof import('./components/ui/sonner/Sonner.vue')['default']
     Switch: typeof import('./components/ui/switch/Switch.vue')['default']
+    Tooltip: typeof import('./components/ui/tooltip/Tooltip.vue')['default']
+    TooltipContent: typeof import('./components/ui/tooltip/TooltipContent.vue')['default']
+    TooltipProvider: typeof import('./components/ui/tooltip/TooltipProvider.vue')['default']
+    TooltipTrigger: typeof import('./components/ui/tooltip/TooltipTrigger.vue')['default']
   }
 }

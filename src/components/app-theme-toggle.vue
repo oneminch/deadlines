@@ -9,7 +9,7 @@ import IconSun from '~icons/ph/sun-duotone'
     <Button
       aria-label="Toggle Color Mode"
       title="Toggle Color Mode"
-      class="icon-button!"
+      :class="['icon-button!', $attrs.class]"
       @click="toggleDark()"
     >
       <IconMoon v-if="isDark" />

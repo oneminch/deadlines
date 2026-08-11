@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
+
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -18,7 +20,7 @@
 }
 
 @utility icon-button {
-  @apply w-10 h-10 flex items-center justify-center *:shrink-0 rounded-sm p-1 text-mist-900 dark:text-mist-50 bg-white dark:bg-mist-800 hover:bg-mist-200 dark:hover:bg-mist-700 border border-mist-200 dark:border-mist-700 focus-visible:global-focus  has-[>svg]:p-1 has-[>svg]:*:size-5;
+  @apply size-10 flex items-center justify-center *:shrink-0 rounded-sm p-1 text-mist-900 dark:text-mist-50 bg-white dark:bg-mist-800 hover:bg-mist-200 dark:hover:bg-mist-700 border border-mist-200 dark:border-mist-700 focus-visible:global-focus  has-[>svg]:p-1 has-[>svg]:*:size-5;
 }
 
 @utility action-item {
