@@ -9,6 +9,9 @@ on:
 jobs:
   deploy:
     uses: oneminch/workflows/.github/workflows/gh-pages-deploy.yml@v1
+    with:
+      build-command: 'pnpm run build'
+      artifact-path: './dist'
     permissions:
       pages: write
       id-token: write
