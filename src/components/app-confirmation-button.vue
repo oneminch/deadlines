@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
+import type { ButtonVariants } from './ui/button'
 
 const props = withDefaults(
   defineProps<{
@@ -9,7 +10,7 @@ const props = withDefaults(
     confirmationClass?: string
   }>(),
   {
-    confirmationClass: 'false',
+    confirmationClass: '',
   },
 )
 
@@ -45,30 +46,27 @@ function reset() {
 </script>
 
 <template>
-  <button
-    :class="{ confirming: isConfirming, [confirmationClass]: isConfirming }"
+  <Button
+    :class="[
+      'relative hover:bg-destructive/90 dark:hover:bg-destructive/90',
+      { [props.confirmationClass]: isConfirming, ['animate-pulse']: isConfirming },
+    ]"
+    :variant="($attrs.variant as ButtonVariants['variant']) || 'destructive'"
     :aria-label="hiddenLabel"
     :title="hiddenLabel"
     @click="handleClick"
   >
     <template v-if="$slots.default && !isConfirming">
       <slot>
-        {{ buttonLabel }}
+        <span class="inline-flex items-center justify-center absolute inset-0">{{
+          buttonLabel
+        }}</span>
       </slot>
     </template>
     <template v-else>
-      {{ buttonLabel }}
+      <span class="inline-flex items-center justify-center absolute inset-0">{{
+        buttonLabel
+      }}</span>
     </template>
-  </button>
+  </Button>
 </template>
-
-<style scoped>
-@keyframes pulse {
-  50% {
-    opacity: 0.6;
-  }
-}
-.confirming {
-  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-</style>

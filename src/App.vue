@@ -10,7 +10,7 @@ import { Toaster } from '@/components/ui/sonner'
 
 <template>
   <div>
-    <main id="app">
+    <main>
       <app-header />
       <app-deadline-list />
       <app-nav-bar />

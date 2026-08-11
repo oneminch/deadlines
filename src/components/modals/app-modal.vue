@@ -27,7 +27,10 @@ const Modal = computed(() => ({
     </component>
     <component
       :is="Modal.Content"
-      :class="['w-auto sm:max-w-md', { 'px-2 *:px-4 border border-b-0': !isDesktop }]"
+      :class="[
+        'w-auto sm:max-w-md h-[70%] sm:h-auto',
+        { 'px-2 *:px-4 border border-b-0': !isDesktop },
+      ]"
     >
       <component :is="Modal.Header">
         <component :is="Modal.Title" class="sr-only">{{ title }}</component>
@@ -36,9 +39,9 @@ const Modal = computed(() => ({
 
       <slot />
 
-      <DrawerFooter v-if="!isDesktop" class="pt-4">
+      <DrawerFooter v-if="!isDesktop" class="py-8">
         <DrawerClose as-child>
-          <Button variant="outline"> Close </Button>
+          <Button variant="ghost"> Close </Button>
         </DrawerClose>
       </DrawerFooter>
     </component>

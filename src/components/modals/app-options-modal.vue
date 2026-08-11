@@ -73,7 +73,7 @@ const optionsModalProps = {
       />
 
       <app-confirmation-button
-        class="action-item w-full! bg-red-500/50! hover:bg-red-500! border-red-600!"
+        class="action-item w-full! hover:bg-destructive/90 dark:hover:bg-destructive/90 border-destructive/50 dark:border-destructive"
         initial-label="Purge Local Data"
         primary-confirmation-label="Are You Sure?"
         secondary-confirmation-label="Are You Sure?"

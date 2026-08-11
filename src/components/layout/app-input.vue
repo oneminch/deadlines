@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useMediaQuery } from '@vueuse/core'
 import { nextTick, onMounted, ref } from 'vue'
 
 const toast = useToast()
@@ -6,6 +7,7 @@ const { addDeadlineItem } = useDeadlines()
 const currentDate = ref<DatePickerModelValue>(DateUtils.getToday())
 const newEntry = ref('')
 const inputRef = ref<HTMLInputElement | null>(null)
+const isDesktop = useMediaQuery('(min-width: 640px)')
 
 const createNewDeadline = async () => {
   if (!newEntry.value.trim()) {
@@ -30,7 +32,7 @@ const createNewDeadline = async () => {
 
 onMounted(() => {
   nextTick(() => {
-    if (inputRef.value) {
+    if (inputRef.value && isDesktop.value) {
       inputRef.value.focus()
     }
   })
@@ -38,10 +40,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <form
-    class="w-full bg-transparent flex flex-col items-center gap-y-4"
-    @submit.prevent="createNewDeadline"
-  >
+  <form class="w-full bg-transparent flex flex-col items-center gap-y-4" @submit.prevent>
     <input
       type="text"
       v-model="newEntry"
@@ -58,7 +57,11 @@ onMounted(() => {
       @update:date="(date: DatePickerModelValue) => (currentDate = date)"
     />
 
-    <button type="submit" class="action-item w-full! h-10! bg-brand! text-mist-50! border-none!">
+    <button
+      type="button"
+      class="action-item w-full! h-10! bg-brand! text-mist-50! border-none!"
+      @click="createNewDeadline"
+    >
       Create
     </button>
   </form>

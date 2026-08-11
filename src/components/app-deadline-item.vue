@@ -59,8 +59,9 @@ const onDelete = () => {
       />
 
       <app-confirmation-button
-        class="icon-button hover:bg-red-500/50! hover:border-red-600!"
-        confirmation-class="bg-red-500/50! border-red-600!"
+        class="icon-button"
+        variant="outline"
+        confirmation-class="bg-destructive/50! border-destructive/50!"
         initial-label="Delete Item"
         primary-confirmation-label="?"
         secondary-confirmation-label="Are You Sure?"
