@@ -30,7 +30,8 @@
 		"tailwind-merge": "^3.6.0",
 		"tailwindcss": "^4.3.3",
 		"vue": "^3.5.40",
-		"vue-sonner": "^2.0.9"
+		"vue-sonner": "^2.0.9",
+		"workbox-window": "^7.4.1"
 	},
 	"devDependencies": {
 		"@iconify-json/ph": "^1.2.2",
@@ -58,6 +59,7 @@
 		"unplugin-icons": "^23.0.1",
 		"unplugin-vue-components": "^32.1.0",
 		"vite": "^8.2.1",
+		"vite-plugin-pwa": "^1.3.0",
 		"vite-plugin-vue-devtools": "^8.2.1",
 		"vitest": "^4.1.10",
 		"vue-eslint-parser": "^10.4.1",

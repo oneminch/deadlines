@@ -7,6 +7,7 @@ import icons from 'unplugin-icons/vite'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import tailwindcss from '@tailwindcss/vite'
+import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -21,10 +22,40 @@ export default defineConfig({
     }),
     icons({ compiler: 'vue3' }),
     components({ dts: 'src/components.d.ts', dirs: ['src/components'] }),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'logo.png', 'logo.svg'],
+      manifest: {
+        name: 'Deadlines',
+        short_name: 'Deadlines',
+        description: 'A simple offline deadline tracker.',
+        theme_color: '#8e51ff',
+        background_color: '#ffffff',
+        display: 'standalone',
+        start_url: '/',
+        scope: '/',
+        icons: [
+          {
+            src: '/logo.svg',
+            sizes: 'any',
+            type: 'image/svg+xml',
+            purpose: 'any maskable',
+          },
+          {
+            src: '/favicon.ico',
+            sizes: '256x256',
+            type: 'image/x-icon',
+          },
+        ],
+      },
+    }),
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  // server: {
+  //   allowedHosts: ['.trycloudflare.com']
+  // }
 })

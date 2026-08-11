@@ -7,6 +7,7 @@ Deadlines is a simple, offline deadline tracker.
 - All Data Stored Locally in the Browser 🔐.
 - Data Import/Export from/to a JSON File 💾.
 - Dark Mode 🌓.
+- Installable PWA with offline app-shell caching 📱.
 
 ![Screenshot](/public/screenshot.png)
 
@@ -41,4 +42,3 @@ Deadlines is a simple, offline deadline tracker.
 [vrc-url]: https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Foneminch%2Fdeadlines
 [ghp-img]: https://img.shields.io/badge/GitHub-f1f5f9?style=for-the-badge&logo=github&logoColor=black
 [ghp-url]: https://github.com/new?template_name=Deadlines&template_owner=oneminch
-
