@@ -53,23 +53,27 @@ const optionsModalProps = {
       <h3 class="text-2xl font-bold">Options</h3>
 
       <div
-        class="flex items-center gap-2 justify-between bg-mist-100 dark:bg-mist-800 rounded-md py-4 px-6 cursor-pointer"
+        class="flex items-center gap-2 justify-between bg-mist-100 dark:bg-mist-800 border border-border rounded-md py-4 px-6 cursor-pointer"
       >
         <Label for="toggle-toast" class="text-base">Enable Toasts</Label>
         <Switch id="toggle-toast" v-model="toastsEnabled" />
       </div>
 
       <hr
-        class="w-4/5 mx-auto my-4 block border-none bg-linear-to-r from-transparent via-mist-200 dark:via-mist-700 to-transparent h-px rounded-full"
+        class="w-4/5 mx-auto block border-none bg-linear-to-r from-transparent via-mist-200 dark:via-mist-700 to-transparent h-px rounded-full"
       />
 
-      <button class="action-item w-full!" @click="exportData">Export to JSON</button>
+      <Button variant="outline" class="action-item w-full!" @click="exportData"
+        >Export to JSON</Button
+      >
 
       <input type="file" ref="fileInputRef" class="sr-only" @change="importData" />
-      <button class="action-item w-full!" @click="triggerFileInput">Import from JSON</button>
+      <Button variant="outline" class="action-item w-full!" @click="triggerFileInput"
+        >Import from JSON</Button
+      >
 
       <hr
-        class="w-4/5 mx-auto my-4 block border-none bg-linear-to-r from-transparent via-mist-200 dark:via-mist-700 to-transparent h-px rounded-full"
+        class="w-4/5 mx-auto block border-none bg-linear-to-r from-transparent via-mist-200 dark:via-mist-700 to-transparent h-px rounded-full"
       />
 
       <app-confirmation-button
