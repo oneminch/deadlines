@@ -39,7 +39,6 @@ __screenshots__/
 *.timestamp-*-*.mjs
 
 # Misc
-.vscode
 *.code-workspace
 archive
 TODO.md
