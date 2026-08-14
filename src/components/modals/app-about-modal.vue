@@ -12,6 +12,13 @@ const aboutModalProps = {
   title: 'About',
   description: 'Information about the app.',
 }
+
+const DETAILS = [
+  '🔐 Data stored locally in your browser.',
+  '💾 Import/export your data from/to a JSON file.',
+  '🌓 Comes with dark mode.',
+  '📱 Installable as a Progressive Web App (PWA) on your device.',
+]
 </script>
 
 <template>
@@ -29,10 +36,9 @@ const aboutModalProps = {
     <section class="w-full sm:w-auto h-auto min-h-56 flex flex-col gap-y-4 justify-between">
       <img src="/logo.svg" alt="Logo" class="mx-auto w-12 h-12" />
       <p class="text-center">Deadlines is a minimal, offline deadline tracker.</p>
-      <p class="text-center">
-        All data is stored locally in the browser 🔐. You can import & export your deadlines from &
-        to a JSON file. It also comes with dark mode 🌓.
-      </p>
+      <div class="max-w-5/6 space-y-2 mx-auto text-sm pl-5">
+        <p v-for="detail in DETAILS" :key="detail">{{ detail }}</p>
+      </div>
       <div class="*:action-item my-4 flex items-center justify-center gap-x-4">
         <a
           aria-label="Nuxt Website"
