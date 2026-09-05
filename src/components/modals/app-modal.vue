@@ -28,7 +28,7 @@ const Modal = computed(() => ({
     <component
       :is="Modal.Content"
       :class="[
-        'w-auto sm:max-w-md h-[70%] sm:h-auto',
+        'w-auto sm:max-w-md h-[90%] sm:h-auto',
         { 'px-2 *:px-4 border border-b-0': !isDesktop },
       ]"
     >
@@ -39,7 +39,7 @@ const Modal = computed(() => ({
 
       <slot />
 
-      <DrawerFooter v-if="!isDesktop" class="py-8">
+      <DrawerFooter v-if="!isDesktop" class="shrink-0 py-8">
         <DrawerClose as-child>
           <Button variant="ghost"> Close </Button>
         </DrawerClose>
