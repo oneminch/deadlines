@@ -28,8 +28,8 @@ const Modal = computed(() => ({
     <component
       :is="Modal.Content"
       :class="[
-        'w-auto sm:max-w-md h-[70%] sm:h-auto',
-        { 'px-2 *:px-4 border border-b-0': !isDesktop },
+        'sm:max-w-md',
+        { 'px-2 pb-8 *:px-4': !isDesktop },
       ]"
     >
       <component :is="Modal.Header">

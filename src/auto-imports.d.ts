@@ -96,146 +96,70 @@ import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
-    readonly Button: UnwrapRef<(typeof import('./components/ui/button/index'))['Button']>
-    readonly Calendar: UnwrapRef<(typeof import('./components/ui/calendar/index'))['Calendar']>
-    readonly CalendarCell: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarCell']
-    >
-    readonly CalendarCellTrigger: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarCellTrigger']
-    >
-    readonly CalendarGrid: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarGrid']
-    >
-    readonly CalendarGridBody: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarGridBody']
-    >
-    readonly CalendarGridHead: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarGridHead']
-    >
-    readonly CalendarGridRow: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarGridRow']
-    >
-    readonly CalendarHeadCell: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarHeadCell']
-    >
-    readonly CalendarHeader: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarHeader']
-    >
-    readonly CalendarHeading: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarHeading']
-    >
-    readonly CalendarNextButton: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarNextButton']
-    >
-    readonly CalendarPrevButton: UnwrapRef<
-      (typeof import('./components/ui/calendar/index'))['CalendarPrevButton']
-    >
-    readonly DEADLINES_STORE_KEY: UnwrapRef<
-      (typeof import('./utils/constants'))['DEADLINES_STORE_KEY']
-    >
-    readonly DEFAULT_OPTIONS: UnwrapRef<(typeof import('./utils/constants'))['DEFAULT_OPTIONS']>
-    readonly DateUtils: UnwrapRef<(typeof import('./utils/helpers'))['DateUtils']>
-    readonly Dialog: UnwrapRef<(typeof import('./components/ui/dialog/index'))['Dialog']>
-    readonly DialogClose: UnwrapRef<(typeof import('./components/ui/dialog/index'))['DialogClose']>
-    readonly DialogContent: UnwrapRef<
-      (typeof import('./components/ui/dialog/index'))['DialogContent']
-    >
-    readonly DialogDescription: UnwrapRef<
-      (typeof import('./components/ui/dialog/index'))['DialogDescription']
-    >
-    readonly DialogFooter: UnwrapRef<
-      (typeof import('./components/ui/dialog/index'))['DialogFooter']
-    >
-    readonly DialogHeader: UnwrapRef<
-      (typeof import('./components/ui/dialog/index'))['DialogHeader']
-    >
-    readonly DialogOverlay: UnwrapRef<
-      (typeof import('./components/ui/dialog/index'))['DialogOverlay']
-    >
-    readonly DialogScrollContent: UnwrapRef<
-      (typeof import('./components/ui/dialog/index'))['DialogScrollContent']
-    >
-    readonly DialogTitle: UnwrapRef<(typeof import('./components/ui/dialog/index'))['DialogTitle']>
-    readonly DialogTrigger: UnwrapRef<
-      (typeof import('./components/ui/dialog/index'))['DialogTrigger']
-    >
-    readonly Drawer: UnwrapRef<(typeof import('./components/ui/drawer/index'))['Drawer']>
-    readonly DrawerClose: UnwrapRef<(typeof import('./components/ui/drawer/index'))['DrawerClose']>
-    readonly DrawerContent: UnwrapRef<
-      (typeof import('./components/ui/drawer/index'))['DrawerContent']
-    >
-    readonly DrawerDescription: UnwrapRef<
-      (typeof import('./components/ui/drawer/index'))['DrawerDescription']
-    >
-    readonly DrawerFooter: UnwrapRef<
-      (typeof import('./components/ui/drawer/index'))['DrawerFooter']
-    >
-    readonly DrawerHeader: UnwrapRef<
-      (typeof import('./components/ui/drawer/index'))['DrawerHeader']
-    >
-    readonly DrawerOverlay: UnwrapRef<
-      (typeof import('./components/ui/drawer/index'))['DrawerOverlay']
-    >
-    readonly DrawerTitle: UnwrapRef<(typeof import('./components/ui/drawer/index'))['DrawerTitle']>
-    readonly DrawerTrigger: UnwrapRef<
-      (typeof import('./components/ui/drawer/index'))['DrawerTrigger']
-    >
-    readonly Label: UnwrapRef<(typeof import('./components/ui/label/index'))['Label']>
-    readonly NativeSelect: UnwrapRef<
-      (typeof import('./components/ui/native-select/index'))['NativeSelect']
-    >
-    readonly NativeSelectOptGroup: UnwrapRef<
-      (typeof import('./components/ui/native-select/index'))['NativeSelectOptGroup']
-    >
-    readonly NativeSelectOption: UnwrapRef<
-      (typeof import('./components/ui/native-select/index'))['NativeSelectOption']
-    >
-    readonly OFFLINE_DB_KEY: UnwrapRef<(typeof import('./utils/constants'))['OFFLINE_DB_KEY']>
-    readonly ONBOARDING_DEADLINES: UnwrapRef<
-      (typeof import('./utils/constants'))['ONBOARDING_DEADLINES']
-    >
-    readonly OPTIONS_STORE_KEY: UnwrapRef<(typeof import('./utils/constants'))['OPTIONS_STORE_KEY']>
-    readonly Popover: UnwrapRef<(typeof import('./components/ui/popover/index'))['Popover']>
-    readonly PopoverAnchor: UnwrapRef<
-      (typeof import('./components/ui/popover/index'))['PopoverAnchor']
-    >
-    readonly PopoverContent: UnwrapRef<
-      (typeof import('./components/ui/popover/index'))['PopoverContent']
-    >
-    readonly PopoverTrigger: UnwrapRef<
-      (typeof import('./components/ui/popover/index'))['PopoverTrigger']
-    >
-    readonly Separator: UnwrapRef<(typeof import('./components/ui/separator/index'))['Separator']>
-    readonly Switch: UnwrapRef<(typeof import('./components/ui/switch/index'))['Switch']>
-    readonly Toaster: UnwrapRef<(typeof import('./components/ui/sonner/index'))['Toaster']>
-    readonly Tooltip: UnwrapRef<(typeof import('./components/ui/tooltip/index'))['Tooltip']>
-    readonly TooltipContent: UnwrapRef<
-      (typeof import('./components/ui/tooltip/index'))['TooltipContent']
-    >
-    readonly TooltipProvider: UnwrapRef<
-      (typeof import('./components/ui/tooltip/index'))['TooltipProvider']
-    >
-    readonly TooltipTrigger: UnwrapRef<
-      (typeof import('./components/ui/tooltip/index'))['TooltipTrigger']
-    >
-    readonly buttonVariants: UnwrapRef<
-      (typeof import('./components/ui/button/index'))['buttonVariants']
-    >
-    readonly circularAccess: UnwrapRef<(typeof import('./utils/helpers'))['circularAccess']>
-    readonly cn: UnwrapRef<(typeof import('./lib/utils'))['cn']>
-    readonly createPersistenceService: UnwrapRef<
-      (typeof import('./utils/persistence'))['createPersistenceService']
-    >
-    readonly deadlineItemSchema: UnwrapRef<(typeof import('./utils/schema'))['deadlineItemSchema']>
-    readonly persistence: UnwrapRef<(typeof import('./utils/persistence'))['persistence']>
-    readonly useDeadlines: UnwrapRef<(typeof import('./composables/use-deadlines'))['default']>
-    readonly useDeadlinesStore: UnwrapRef<
-      (typeof import('./stores/deadlines'))['useDeadlinesStore']
-    >
-    readonly useFile: UnwrapRef<(typeof import('./composables/use-file'))['default']>
-    readonly useOptions: UnwrapRef<(typeof import('./composables/use-options'))['default']>
-    readonly useOptionsStore: UnwrapRef<(typeof import('./stores/options'))['useOptionsStore']>
-    readonly useToast: UnwrapRef<(typeof import('./composables/use-toast'))['default']>
+    readonly Button: UnwrapRef<typeof import('./components/ui/button/index')['Button']>
+    readonly Calendar: UnwrapRef<typeof import('./components/ui/calendar/index')['Calendar']>
+    readonly CalendarCell: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarCell']>
+    readonly CalendarCellTrigger: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarCellTrigger']>
+    readonly CalendarGrid: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarGrid']>
+    readonly CalendarGridBody: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarGridBody']>
+    readonly CalendarGridHead: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarGridHead']>
+    readonly CalendarGridRow: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarGridRow']>
+    readonly CalendarHeadCell: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarHeadCell']>
+    readonly CalendarHeader: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarHeader']>
+    readonly CalendarHeading: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarHeading']>
+    readonly CalendarNextButton: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarNextButton']>
+    readonly CalendarPrevButton: UnwrapRef<typeof import('./components/ui/calendar/index')['CalendarPrevButton']>
+    readonly DEADLINES_STORE_KEY: UnwrapRef<typeof import('./utils/constants')['DEADLINES_STORE_KEY']>
+    readonly DEFAULT_OPTIONS: UnwrapRef<typeof import('./utils/constants')['DEFAULT_OPTIONS']>
+    readonly DateUtils: UnwrapRef<typeof import('./utils/helpers')['DateUtils']>
+    readonly Dialog: UnwrapRef<typeof import('./components/ui/dialog/index')['Dialog']>
+    readonly DialogClose: UnwrapRef<typeof import('./components/ui/dialog/index')['DialogClose']>
+    readonly DialogContent: UnwrapRef<typeof import('./components/ui/dialog/index')['DialogContent']>
+    readonly DialogDescription: UnwrapRef<typeof import('./components/ui/dialog/index')['DialogDescription']>
+    readonly DialogFooter: UnwrapRef<typeof import('./components/ui/dialog/index')['DialogFooter']>
+    readonly DialogHeader: UnwrapRef<typeof import('./components/ui/dialog/index')['DialogHeader']>
+    readonly DialogOverlay: UnwrapRef<typeof import('./components/ui/dialog/index')['DialogOverlay']>
+    readonly DialogScrollContent: UnwrapRef<typeof import('./components/ui/dialog/index')['DialogScrollContent']>
+    readonly DialogTitle: UnwrapRef<typeof import('./components/ui/dialog/index')['DialogTitle']>
+    readonly DialogTrigger: UnwrapRef<typeof import('./components/ui/dialog/index')['DialogTrigger']>
+    readonly Drawer: UnwrapRef<typeof import('./components/ui/drawer/index')['Drawer']>
+    readonly DrawerClose: UnwrapRef<typeof import('./components/ui/drawer/index')['DrawerClose']>
+    readonly DrawerContent: UnwrapRef<typeof import('./components/ui/drawer/index')['DrawerContent']>
+    readonly DrawerDescription: UnwrapRef<typeof import('./components/ui/drawer/index')['DrawerDescription']>
+    readonly DrawerFooter: UnwrapRef<typeof import('./components/ui/drawer/index')['DrawerFooter']>
+    readonly DrawerHeader: UnwrapRef<typeof import('./components/ui/drawer/index')['DrawerHeader']>
+    readonly DrawerOverlay: UnwrapRef<typeof import('./components/ui/drawer/index')['DrawerOverlay']>
+    readonly DrawerTitle: UnwrapRef<typeof import('./components/ui/drawer/index')['DrawerTitle']>
+    readonly DrawerTrigger: UnwrapRef<typeof import('./components/ui/drawer/index')['DrawerTrigger']>
+    readonly Label: UnwrapRef<typeof import('./components/ui/label/index')['Label']>
+    readonly NativeSelect: UnwrapRef<typeof import('./components/ui/native-select/index')['NativeSelect']>
+    readonly NativeSelectOptGroup: UnwrapRef<typeof import('./components/ui/native-select/index')['NativeSelectOptGroup']>
+    readonly NativeSelectOption: UnwrapRef<typeof import('./components/ui/native-select/index')['NativeSelectOption']>
+    readonly OFFLINE_DB_KEY: UnwrapRef<typeof import('./utils/constants')['OFFLINE_DB_KEY']>
+    readonly ONBOARDING_DEADLINES: UnwrapRef<typeof import('./utils/constants')['ONBOARDING_DEADLINES']>
+    readonly OPTIONS_STORE_KEY: UnwrapRef<typeof import('./utils/constants')['OPTIONS_STORE_KEY']>
+    readonly Popover: UnwrapRef<typeof import('./components/ui/popover/index')['Popover']>
+    readonly PopoverAnchor: UnwrapRef<typeof import('./components/ui/popover/index')['PopoverAnchor']>
+    readonly PopoverContent: UnwrapRef<typeof import('./components/ui/popover/index')['PopoverContent']>
+    readonly PopoverTrigger: UnwrapRef<typeof import('./components/ui/popover/index')['PopoverTrigger']>
+    readonly Separator: UnwrapRef<typeof import('./components/ui/separator/index')['Separator']>
+    readonly Switch: UnwrapRef<typeof import('./components/ui/switch/index')['Switch']>
+    readonly Toaster: UnwrapRef<typeof import('./components/ui/sonner/index')['Toaster']>
+    readonly Tooltip: UnwrapRef<typeof import('./components/ui/tooltip/index')['Tooltip']>
+    readonly TooltipContent: UnwrapRef<typeof import('./components/ui/tooltip/index')['TooltipContent']>
+    readonly TooltipProvider: UnwrapRef<typeof import('./components/ui/tooltip/index')['TooltipProvider']>
+    readonly TooltipTrigger: UnwrapRef<typeof import('./components/ui/tooltip/index')['TooltipTrigger']>
+    readonly buttonVariants: UnwrapRef<typeof import('./components/ui/button/index')['buttonVariants']>
+    readonly circularAccess: UnwrapRef<typeof import('./utils/helpers')['circularAccess']>
+    readonly cn: UnwrapRef<typeof import('./lib/utils')['cn']>
+    readonly createPersistenceService: UnwrapRef<typeof import('./utils/persistence')['createPersistenceService']>
+    readonly deadlineItemSchema: UnwrapRef<typeof import('./utils/schema')['deadlineItemSchema']>
+    readonly persistence: UnwrapRef<typeof import('./utils/persistence')['persistence']>
+    readonly useDeadlines: UnwrapRef<typeof import('./composables/use-deadlines')['default']>
+    readonly useDeadlinesStore: UnwrapRef<typeof import('./stores/deadlines')['useDeadlinesStore']>
+    readonly useFile: UnwrapRef<typeof import('./composables/use-file')['default']>
+    readonly useOptions: UnwrapRef<typeof import('./composables/use-options')['default']>
+    readonly useOptionsStore: UnwrapRef<typeof import('./stores/options')['useOptionsStore']>
+    readonly useToast: UnwrapRef<typeof import('./composables/use-toast')['default']>
   }
 }
