@@ -12,7 +12,7 @@
 	},
 	"iconLibrary": "phosphor",
 	"rtl": false,
-	"pointer": false,
+	"pointer": true,
 	"aliases": {
 		"components": "@/components",
 		"utils": "@/lib/utils",

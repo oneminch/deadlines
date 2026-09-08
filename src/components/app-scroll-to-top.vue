@@ -24,7 +24,7 @@ onUnmounted(() => {
 <template>
   <div
     :class="[
-      'flex items-center gap-x-2 shadow-md rounded-full p-1.5 sm:p-1 bg-brand-light dark:bg-mist-900 border-2 sm:border border-brand',
+      'flex items-center gap-x-2 shadow-md rounded-full p-1.5 sm:p-1 bg-brand-light dark:bg-mist-900 border border-border ring-inset ring ring-brand',
       $attrs.class,
       { hidden: !enableButton },
     ]"
@@ -36,7 +36,7 @@ onUnmounted(() => {
           <Button
             variant="outline"
             @click="scrollToTop"
-            class="action-item overflow-hidden shadow-md rounded-full! size-10! gap-x-0!"
+            class="*:shrink-0 gap-0 focus-visible:global-focus overflow-hidden rounded-full size-10"
             aria-label="Scroll to Top"
           >
             <IconCaretLineUp class="text-lg" />

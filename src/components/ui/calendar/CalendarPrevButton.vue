@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { CalendarPrevProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { PhCaretLeft } from '@phosphor-icons/vue'
+import PhCaretLeft from '~icons/ph/caret-left'
 import { reactiveOmit } from '@vueuse/core'
 import { CalendarPrev, useForwardProps } from 'reka-ui'
 

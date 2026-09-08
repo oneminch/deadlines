@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useMediaQuery } from '@vueuse/core'
 import { nextTick, onMounted, ref } from 'vue'
+import { Button } from '@/components/ui/button'
 
 const toast = useToast()
 const { addDeadlineItem } = useDeadlines()
@@ -57,12 +58,13 @@ onMounted(() => {
       @update:date="(date: DatePickerModelValue) => (currentDate = date)"
     />
 
-    <button
+    <Button
       type="button"
-      class="action-item w-full! h-10! bg-brand! text-mist-50! border-none!"
+      variant="default"
+      class="w-full! h-10 bg-brand"
       @click="createNewDeadline"
     >
       Create
-    </button>
+    </Button>
   </form>
 </template>

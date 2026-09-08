@@ -6,6 +6,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  --breakpoint-xs: 30rem;
   --font-sans: 'Geist', sans-serif;
   --color-brand: var(--color-violet-500);
   --color-brand-light: var(--color-violet-50);
@@ -21,10 +22,6 @@
 
 @utility icon-button {
   @apply size-10 flex items-center justify-center *:shrink-0 rounded-sm p-1 text-mist-900 dark:text-mist-50 bg-white dark:bg-mist-800 hover:bg-mist-200 dark:hover:bg-mist-700 border border-mist-200 dark:border-mist-700 focus-visible:global-focus  has-[>svg]:p-1 has-[>svg]:*:size-5;
-}
-
-@utility action-item {
-  @apply h-8 flex items-center justify-center *:shrink-0 gap-x-2 rounded-sm py-1 px-3 text-mist-900 dark:text-mist-50 bg-mist-100 dark:bg-mist-700 hover:bg-mist-200 dark:hover:bg-mist-600 border border-mist-300 dark:border-mist-600 focus-visible:global-focus;
 }
 
 @utility update-highlight {
@@ -49,6 +46,10 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
   }
 }
 

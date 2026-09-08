@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { PhX } from '@phosphor-icons/vue'
+import PhX from '~icons/ph/x'
 import { reactiveOmit } from '@vueuse/core'
 import {
   DialogClose,

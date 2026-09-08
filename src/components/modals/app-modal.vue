@@ -2,10 +2,14 @@
 import { useMediaQuery } from '@vueuse/core'
 import { computed, ref } from 'vue'
 
-defineProps<{
-  title: string
-  description: string
-}>()
+withDefaults(
+  defineProps<{
+    title: string
+    description: string
+    withClose?: boolean
+  }>(),
+  { withClose: false },
+)
 
 const isDesktop = useMediaQuery('(min-width: 640px)')
 const isOpen = ref(false)
@@ -17,6 +21,8 @@ const Modal = computed(() => ({
   Header: isDesktop.value ? DialogHeader : DrawerHeader,
   Title: isDesktop.value ? DialogTitle : DrawerTitle,
   Description: isDesktop.value ? DialogDescription : DrawerDescription,
+  Footer: isDesktop.value ? DialogFooter : DrawerFooter,
+  Close: isDesktop.value ? DialogClose : DrawerClose,
 }))
 </script>
 
@@ -27,10 +33,7 @@ const Modal = computed(() => ({
     </component>
     <component
       :is="Modal.Content"
-      :class="[
-        'w-auto sm:max-w-md h-[70%] sm:h-auto',
-        { 'px-2 *:px-4 border border-b-0': !isDesktop },
-      ]"
+      :class="['sm:max-w-md gap-0!', { 'px-2 pb-2 *:px-4': !isDesktop }]"
     >
       <component :is="Modal.Header">
         <component :is="Modal.Title" class="sr-only">{{ title }}</component>
@@ -39,11 +42,13 @@ const Modal = computed(() => ({
 
       <slot />
 
-      <DrawerFooter v-if="!isDesktop" class="py-8">
-        <DrawerClose as-child>
-          <Button variant="ghost"> Close </Button>
-        </DrawerClose>
-      </DrawerFooter>
+      <component :is="Modal.Footer" class="flex-col! gap-0">
+        <slot name="footer" />
+
+        <component v-if="withClose" :is="Modal.Close" as-child>
+          <Button variant="outline"> Close </Button>
+        </component>
+      </component>
     </component>
   </component>
 </template>

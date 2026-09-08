@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { AcceptableValue } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { PhCaretDown } from '@phosphor-icons/vue'
+import PhCaretDown from '~icons/ph/caret-down'
 import { reactiveOmit, useVModel } from '@vueuse/core'
 
 defineOptions({

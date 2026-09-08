@@ -24,7 +24,7 @@ const inputModalProps = {
     </template>
 
     <section
-      class="w-full sm:w-sm h-auto min-h-36 sm:py-6 p-2 flex flex-col gap-y-4 justify-between"
+      class="w-full sm:max-w-sm mx-auto h-auto min-h-36 mt-4 flex flex-col gap-y-4 justify-between"
     >
       <app-input />
     </section>

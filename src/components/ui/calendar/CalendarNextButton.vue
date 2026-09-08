@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { CalendarNextProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import { PhCaretRight } from '@phosphor-icons/vue'
+import PhCaretRight from '~icons/ph/caret-right'
 import { reactiveOmit } from '@vueuse/core'
 import { CalendarNext, useForwardProps } from 'reka-ui'
 

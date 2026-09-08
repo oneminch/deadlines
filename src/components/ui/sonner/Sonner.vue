@@ -1,13 +1,11 @@
 <script lang="ts" setup>
 import type { ToasterProps } from 'vue-sonner'
-import {
-  PhCheckCircle,
-  PhInfo,
-  PhCircleNotch,
-  PhXCircle,
-  PhWarning,
-  PhX,
-} from '@phosphor-icons/vue'
+import PhCheckCircle from '~icons/ph/check-circle'
+import PhInfo from '~icons/ph/info'
+import PhCircleNotch from '~icons/ph/circle-notch'
+import PhXCircle from '~icons/ph/x-circle'
+import PhWarning from '~icons/ph/warning'
+import PhX from '~icons/ph/x'
 import { Toaster as Sonner } from 'vue-sonner'
 
 const props = defineProps<ToasterProps>()
