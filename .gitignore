@@ -37,6 +37,8 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+src/auto-imports.d.ts
+src/components.d.ts
 
 # Misc
 *.code-workspace
