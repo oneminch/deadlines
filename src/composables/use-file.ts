@@ -78,21 +78,41 @@ const useFile = () => {
     }
   }
 
-  const exportData = () => {
+  const exportData = async () => {
     if (deadlines.value.length === 0) {
       toast.error('There is Nothing to Export.', true)
       return
     }
 
     const dataStr = JSON.stringify(deadlines.value)
-    const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr)
-
     const exportFileName = 'deadlines.json'
+    const file = new File([dataStr], exportFileName, { type: 'application/json' })
+
+    // iOS Safari (including PWA/standalone mode) doesn't reliably support
+    // downloading files via data URIs or the anchor `download` attribute, so
+    // the Web Share API is used there instead when available.
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file] })
+        toast.success('Data Exported Successfully.', true)
+      } catch (error: any) {
+        if (error.name !== 'AbortError') {
+          toast.error('Unable to Export Data.', true)
+        }
+      }
+      return
+    }
+
+    const blobUrl = URL.createObjectURL(new Blob([dataStr], { type: 'application/json' }))
 
     const linkElement = document.createElement('a')
-    linkElement.setAttribute('href', dataUri)
+    linkElement.setAttribute('href', blobUrl)
     linkElement.setAttribute('download', exportFileName)
+    document.body.appendChild(linkElement)
     linkElement.click()
+    document.body.removeChild(linkElement)
+    URL.revokeObjectURL(blobUrl)
+
     toast.success('Data Exported Successfully.', true)
   }
 
